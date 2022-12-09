@@ -1,0 +1,71 @@
+.background{
+    background: url("/freedom.jpg");
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+}
+
+
+.package{
+    /* background: lightgreen; */
+    margin: 2rem 0;
+    border: 2px solid darkgreen;
+    width: 66%;
+    position: relative;  
+}
+
+.package a{
+    text-decoration: none;
+    color: inherit;
+    display: block;;
+    padding: 2rem;
+}
+.package:hover,.package :active{
+    box-shadow: 2px 2px 4px rgba(0, 0,o,0.5);
+    border-color: orange;
+}
+.package__title{
+    color: black;
+}
+
+.package__badge{
+    /* position: absolute;
+    top: 1.2rem; 
+    right: 0.75rem;
+    color: orange; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1.2rem;
+    font-size: 0.8rem;
+    color: white;
+    background: #ff5454;
+    padding: 0.5rem;
+}
+.package__subtitle{
+    color: darkgrey
+}
+.package__info{
+    border: 1px solid darkgreen;
+    padding: 1rem;
+    background: white;
+}
+#plus{ /*ids are used to add different background to the */
+    background: rgb(199, 236, 199);
+    border: 0px;
+}
+
+#free{
+    background: rgb(230, 243, 230);
+    margin: 0 0 0 33%;
+}
+#premium{
+    background: darkgreen;   
+}
+@media (min-width:40rem) {
+    .main{
+    margin: 3rem auto;
+    max-width: 1500px;
+    }
+}
