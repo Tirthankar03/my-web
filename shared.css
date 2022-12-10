@@ -26,14 +26,18 @@ body {
     width: 80%;
     height: 100vh;
   }
-  
+
   .mobile-nav__items {
-    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    /* width: 90%; */
     height: 100%;
     list-style: none;
-    margin: 10% auto;
+    margin: 0;
     padding: 0;
-    text-align: center;
+    /* text-align: center; */
   }
   
   .mobile-nav__item {
@@ -76,6 +80,8 @@ body {
     z-index: 10;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    
 
 }
 .toggle-button {
@@ -102,18 +108,21 @@ body {
   }
   
 
-.main-header > div{
+/* .main-header > div{
     display: inline-block;
     vertical-align: middle;
-}
+} */
 
 .main-header__brand{
     color: darkgreen;
     text-decoration: none; /*css comes with a default underline element*/
     font-weight: bold;
     font-size: 22px;
-    display: inline-block;
+    /* display: inline-block; */
 }
+
+
+
 /*navigation bar*/
 
 .main-nav{
@@ -124,11 +133,12 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
-    
+    display: flex;
+    /* justify-content: space-evenly; */
 }   
 
 .main-nav__item{
-    display:inline-block;
+    /* display:inline-block; */
     margin: 0 16px;
 }
 
@@ -160,32 +170,23 @@ body {
     background: white;
     border: none;
 }
-@media (min-width: 40rem) {
-  .toggle-button{
-    display: none;
-  }
-  .main-nav{
-    display: inline-block;
-    text-align: right;
-    width: calc(100% - 122px);
-    vertical-align: middle;
-    
-}
-}
+
 .main-footer{
     background: black;
     padding: 2rem;
-    margin-top: 48px;
+    margin-top: 4rem;
 }
 .main-footer__links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    /* text-align: center; */
 } 
 .main-footer__link{
-    display: inline;
-    margin: 0 16px;
+    margin: 0.5rem 0;
 } 
 .main-footer__link a{
     color: white;
@@ -246,4 +247,24 @@ body {
 
   .open{
     display: block !important;
+  }
+
+  @media (min-width: 40rem) {
+    .toggle-button{
+      display: none;
+    }
+    .main-nav{
+      display: flex;
+      /* text-align: right; */
+      /* width: calc(100% - 122px); */
+      /* vertical-align: middle; */
+      
+  }
+  .main-footer__links{
+    flex-direction: row;
+    justify-content: center;
+} 
+.main-footer__link{
+  margin: 0 0.5rem;
+} 
   }
